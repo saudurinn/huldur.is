@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <style>
-    button { background-color: blue;
-    color: white;
-    border: none;
-    height: 24px;
-    width: 62px;
-    border-radius: 2px;
-    font-family: monospace;
-    cursor: pointer;        
+    .lang-button { background-color: blue;
+        color: white;
+        border: none;
+        height: 24px;
+        width: 70px;
+        border-radius: 2px;
+        font-family: monospace;
+        cursor: pointer;  
+        transition-duration: 0.08s;
+    }
+    
+    .lang-button:hover {
+        background-color: white;
+        color: blue;
+    }
+    
+    .lang-button:active {
+        opacity: 0.5;
     }
 </style>
-    <a href="https://www.huldur.com">
-        <button>English</button>
-    </a>
-	<head>
-		<title>Kammerkórinn Huldur</title>
-		<meta name="description" content="Kammerkórinn Huldur">
 
-	</head>
+
+<head>
+		<title>Kammerkórinn Huldur</title>
+        <link rel="icon" type="image/png" href="icons/huldur%20cover%20icon.png">
+</head>
+    <a href="https://www.huldur.is">
+        <button class="lang-button">
+            English
+        </button>
+    </a>
 	<body>
 		<section>
-            <p><i>..................................Vefsíða í byggingu</i></p>
+            <p><i>..................................vefsíða í byggingu</i></p>
             <h2><i>Buslaraborg bíður<i></h2>
         </section>
 
-		<img src="huldur%20cover%20primg.jpg" with="400"height="400"></p>
+		<img class="background-image" src="huldur%20cover%20primg.jpg" with="1500"height="1500">   
 	</body>    
