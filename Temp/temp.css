@@ -1,0 +1,261 @@
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,900");
+@font-face {
+  font-family: 'Abhaya Libre Regular';
+  font-style: normal;
+  font-weight: 300;
+  src: url("AbhayaLibre-Regular") format('ttf');
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+body{
+    margin: 0;
+}
+
+a{
+    font-family: 'lato';
+    font-size: 20px;
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(16,58,24,0.4);
+    z-index: 1000;
+    transition: .3s;
+}
+#enska{
+    width: 40px;
+    border: solid transparent;
+    transition: .5s;
+}#enska:hover{
+    border: solid #FFB53F;
+    transition: .1s;
+}
+.section {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+}
+
+#section2 {
+    position: relative;    
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    border-color: black;
+    top: 100%;
+}
+
+#Spili{
+    position: relative;
+    top: 20vh;
+    width: 5vw;
+    height: 5vh;
+    background-color: green;
+    font-family: 'Abhaya Libre';
+    color: #FFB53F;
+}
+
+#game{
+    position: absolute; 
+    padding: 5vh 5vw 5vh 5vw;
+    z-index: 100;
+}
+#stig{
+    transition: .2s;
+}
+
+
+.image-container {
+  position: relative;
+  display: flex;
+}
+
+#image {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  top: 0;
+    
+}
+
+.middle {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    top: 100%;
+    font-family: 'lato-light';
+    font-size-adjust: auto;
+    text-overflow: ellipsis;
+}
+.middle {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+    top: 100%;
+    font-family: 'lato-light';
+    font-size-adjust: auto;
+}
+
+#texti{
+    margin: auto;
+    position: relative;
+    align-content: center;
+    text-align: center;
+    color: #FFB53F;
+    top: 1vh;
+    font-family: 'Abhaya Libre';
+    font-weight: 100;
+    letter-spacing: .2em;
+    z-index: 101;
+}
+
+#texti img{
+    width: 40%;
+}
+
+#um{
+    padding: 0 0 0 0; 
+    width: 66.7vw; 
+    position: absolute; 
+    top: 30px; 
+    text-overflow: ellipsis; 
+}
+
+	ul.icons {
+		list-style: none;
+		padding-left: 0;
+		cursor: default;
+	}
+
+		ul.icons li {
+			display: inline-block;
+			line-height: 1em;
+			padding-left: 0.5em;
+		}
+
+			ul.icons li:first-child {
+				padding-left: 0;
+			}
+.icon {
+		text-decoration: none;
+		position: relative;
+	}
+
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			text-transform: none !important;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 400;
+		}
+
+		.icon.solid:before {
+			font-weight: 900;
+		}
+
+		.icon:before {
+			line-height: inherit;
+		}
+
+		.icon.brands:before {
+			font-family: 'Font Awesome 5 Brands';
+		}
+
+		.icon.circle {
+			-moz-transition: all 0.2s ease-in-out;
+			-webkit-transition: all 0.2s ease-in-out;
+			-ms-transition: all 0.2s ease-in-out;
+			transition: all 0.2s ease-in-out;
+			border: 0;
+			border-radius: 100%;
+			display: inline-block;
+			font-size: 1.25em;
+			height: 2.25em;
+			left: 0;
+			line-height: 2.25em;
+			text-align: center;
+			text-decoration: none;
+			top: 0;
+			width: 2.25em;
+		}
+
+			.icon.circle.fa-instagram {
+				background: #12511B;
+				color: #fff;
+			}
+
+				.icon.circle.fa-instagram:hover {
+					background: #1A7026;
+                    transition: .1s;
+				}
+
+			.icon.circle.fa-facebook-f {
+				background: #12511B;
+				color: #fff;
+			}
+
+				.icon.circle.fa-facebook-f:hover {
+					background: #1A7026;
+                    transition: .1s;
+				}
+
+			.icon.circle.fa-tiktok {
+				background: #12511B;
+				color: #fff;
+			}
+
+				.icon.circle.fa-tiktok:hover {
+					background: #1A7026;
+                    transition: .1s;
+				}
+
+		.icon > .label {
+			display: none;
+		}
+
+footer {
+    position: relative;    
+    /*background-color: rgba(16,58,24,0.6);*/
+    top: 100%;
+    color: black;
+}
+	#footer {
+		color: #FFB53F;
+		padding: 2em 2em 2em 2em;
+		text-align: center;
+	}
+		#footer .copyright {
+			font-size: 1em;
+			line-height: 1em;
+            text-align: center;
+            font-family: 'lato-light';
+            padding-right: 30px;
+            
+		}
+
+			#footer .copyright a {
+				color: inherit;
+			}
+
+			#footer .copyright li {
+				display: inline-block;
+				margin-left: 1em;
+				padding-left: 1em;
+				border-left: dotted 1px;
+			}
+
+				#footer .copyright li:first-child {
+					margin: 0;
+					padding: 0;
+					border: 0;
+				}
