@@ -71,17 +71,17 @@ var TS = 0;
             
             
             if(!Number.isInteger(snake.x/grid)){
-                document.getElementById("texti").innerHTML += "A";
+                //document.getElementById("texti").innerHTML += "A";
                 snake.x = Math.floor(snake.x/grid) * grid;
             }else if (!Number.isInteger(snake.y/grid)){
-                document.getElementById("texti").innerHTML += "Ö";
+                //document.getElementById("texti").innerHTML += "Ö";
                 snake.y = Math.floor(snake.y/grid) * grid;
             }
             if(!Number.isInteger(apple.x/grid)){
-                document.getElementById("texti").innerHTML += "A";
+                //document.getElementById("texti").innerHTML += "A";
                 apple.x = Math.floor(apple.x/grid) * grid;
             }else if (!Number.isInteger(apple.y/grid)){
-                document.getElementById("texti").innerHTML += "Ö";
+                //document.getElementById("texti").innerHTML += "Ö";
                 apple.y = Math.floor(apple.y/grid) * grid;
             }
 
@@ -144,7 +144,7 @@ var TS = 0;
               if(score >= TS && (document.body.scrollTop < 100 || document.documentElement.scrollTop < 100)){
                     stig.innerHTML = /*"<a id='stig' style='color: #FFB53F'> Nýtt met! </a>" + */score + "/" + TS;
                 }else{
-              stig.innerHTML = score + "/" + TS;}
+              stig.innerHTML = "Stig: " + score + " / " + TS;}
             //nr.innerHTML = "" + bh + "/" + bw + "<br>" + "grid: " + grid + "<br>" + "x " + cell.x + " y " + cell.y + " <br> x " + apple.x + " y " + apple.y + "<br>" + snake.cells.length; 
               
               
