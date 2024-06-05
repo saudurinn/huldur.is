@@ -1,26 +1,36 @@
 window.addEventListener("keydown", function (e) { if (["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) { e.preventDefault(); } }, false);
+
+var mobile = false;
             
-        var canvas = document.getElementById('game');
-        var nr = document.getElementById('numer');
-        var context = canvas.getContext('2d');
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  // true for mobile device
+  mobile = true;
+}else{
+  // false for not mobile device
+  mobile = false;
+}
+
+var canvas = document.getElementById('game');
+var nr = document.getElementById('numer');
+var context = canvas.getContext('2d');
 var stig = document.getElementById('stig');
 var score = 0;
 var TS = 0;
         
-        canvas.height = Math.round((window.innerHeight * 0.9)/10) * 10;
-        canvas.width = Math.round((window.innerWidth * 0.9)/10) * 10; 
-        
-        var gaming = true;
+canvas.height = Math.round((window.innerHeight * 0.9)/10) * 10;
+canvas.width = Math.round((window.innerWidth * 0.9)/10) * 10; 
+
+var gaming = true;
         
         
 
-        bh = canvas.height;
-        bw = canvas.width;
+bh = canvas.height;
+bw = canvas.width;
     
-        var grid = Math.round((bh+bw)/50);
-        var count = 0;
+var grid = Math.round((bh+bw)/50);
+var count = 0;
 
-        var snake = {
+var snake = {
           x: grid * 2,
           y: grid * 2,
 
@@ -33,21 +43,23 @@ var TS = 0;
 
           // length of the snake. grows when eating an apple
           maxCells: 4
-        };
-        var apple = {
+};
+var apple = {
           x: grid * 4,
           y: grid * 4
-        };
+};
 
-        // get random whole numbers in a specific range
-        // @see https://stackoverflow.com/a/1527820/2124254
-        function getRandomInt(min, max) {
-          return Math.floor(Math.random() * (max - min)) + min;
-        }
+// get random whole numbers in a specific range
+// @see https://stackoverflow.com/a/1527820/2124254
+function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+}
 
-        // game loop
-        function loop() {
-            
+// game loop
+function loop() {
+          if(mobile){
+                return;
+            }
           requestAnimationFrame(loop);
         
           // slow game loop to 15 fps instead of 60 (60/15 = 4)
@@ -202,7 +214,7 @@ var TS = 0;
             snake.dx = 0;
               
           }
-        });
+});
 
-        // start the game
-        requestAnimationFrame(loop);
+// start the game
+requestAnimationFrame(loop);
