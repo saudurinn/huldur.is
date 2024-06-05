@@ -29,6 +29,7 @@ bw = canvas.width;
     
 var grid = Math.round((bh+bw)/50);
 var count = 0;
+var byrjunarlengd = 4;
 
 var snake = {
           x: grid * 2,
@@ -42,7 +43,7 @@ var snake = {
           cells: [],
 
           // length of the snake. grows when eating an apple
-          maxCells: 4
+          maxCells: byrjunarlengd
 };
 var apple = {
           x: grid * 4,
@@ -66,9 +67,6 @@ function loop() {
           if (++count < 4) {
             return;
           }
-          if(!gaming){
-                return;
-            }  
             if (score > TS){
                 TS = score;
                 
@@ -152,7 +150,7 @@ function loop() {
               apple.x = getRandomInt(0, bw/grid) * grid;
               apple.y = getRandomInt(0, bh/grid) * grid;
             }
-              score = snake.cells.length
+              score = snake.cells.length - byrjunarlengd;
               if(score >= TS && (document.body.scrollTop < 100 || document.documentElement.scrollTop < 100)){
                     stig.innerHTML = /*"<a id='stig' style='color: #FFB53F'> Nýtt met! </a>" + */score + "/" + TS;
                 }else{
