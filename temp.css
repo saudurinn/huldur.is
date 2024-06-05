@@ -10,12 +10,12 @@
 
 body{
     margin: 0;
-}
+    }
 
 a{
     font-family: 'lato';
     font-size: 20px;
-}
+    }
 
 #header{
     position: fixed;
@@ -24,15 +24,39 @@ a{
     background-color: rgba(16,58,24,0.4);
     z-index: 1000;
     transition: .3s;
-}
+    }
 #enska{
     width: 40px;
-    border: solid transparent;
     transition: .5s;
-}#enska:hover{
-    border: solid #FFB53F;
+        }
+#enska:hover{
     transition: .1s;
+    background-color: white;
+            color: blue;
 }
+
+.enbutt { 
+            background-color: transparent;
+            color: white;
+            border: none;
+            height: 40px;
+            width: 70px;
+            border-radius: 2px;
+            font-family: monospace;
+            cursor: pointer;  
+            transition-duration: 0.08s;
+            }
+        
+        .enbutt:hover {
+            background-color: transparent;
+            opacity: 0.5;
+            color: white;
+            }
+        
+        .enbutt:active {
+            opacity: 0.5;
+            }     
+
 .section {
   display: flex;
   min-height: 100vh;
@@ -223,6 +247,10 @@ a{
 			display: none;
 		}
 
+           
+        
+    
+}
 footer {
     position: relative;    
     /*background-color: rgba(16,58,24,0.6);*/
