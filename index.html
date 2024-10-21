@@ -1,84 +1,123 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head > <title>Huldur</title>
+<link rel="icon" type="image/x-icon" href="/images/HuldurLogo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="https://kit.fontawesome.com/65de35f3cd.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
 
-<html>
-	<head>
-		<title>Huldur</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="css/temp.css" />  
-        	<link rel="icon" type="image/png" href="icons/huldur%20cover%20icon.png">
-        
-	</head>
-	<body>
-        <header id="header">
-            <a href="https://huldur.com" style="position: fixed; top: 12.5px; left: 10px;">
-                <button class="enbutt">English
-                    <img id="enska" src="https://cdn.britannica.com/25/4825-004-F1975B92/Flag-United-Kingdom.jpg"/>
-                </button>
-            </a>
-            <a id="stig" style="position: absolute; top: 12.5px; right: 20px; color: white; text-align: end;">
-            </a>
-            <a class="email" style="text-align: center; top: 5px; right: 10px; color: white;"><p><i>Hafa samband:</i>   kammerkorinnhuldur@gmail.com</p>
-            </a>
-        </header>
-        <div class="section"> 
-            <canvas class="smake" id="game">
-                
-            </canvas>
-            
-            <div class="image-container">
-                <div id="image" style=""></div>
-            </div>
-            <!--- <button id="Spili"> Hallo </button>--->
-            <div id="texti">
-                <h1>VEFSÍÐA Í VÆNDUM<br><img src="images/HuldurLogo3.png"/></h1> 
-                <a id="numer"></a>
-                
-            </div>
-            
-        </div>
-        <div class="middle">
-            <table class="item">
-                <td id="um"><img align="left" style="padding: 0 15px 0 5px; width: 30vw;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Hrei%C3%B0ar_Ingi_%C3%9Eorsteinsson.png/1024px-Hrei%C3%B0ar_Ingi_%C3%9Eorsteinsson.png"/><h2 style=" font-family: 'lato-black';">Um Kammerkórinn Huldur</h2><p>
-Kammerkórinn Huldur var stofnaður af kórstjóranum og tónskáldinu Hreiðari Inga Þorsteinssyni haustið 2021. Samkvæmt íslenskum þjóðsögum og ljóðum er huldur náttúruvættur, sem býr í fossgljúfrum eða djúpt í hafi og knýr fram öldugang með söng og leik á langspil. Kórmeðlimir eru á aldrinum 18-26 ára. Markmið kórstarfsins er að kynna kórmeðlimum stefnur og strauma innan nýrrar kórtónlistar og síðan, með það veganesti, að virkja meðlimi til tónsköpunar, svo að úr verði vinnusmiðja í tónsmíðum fyrir ung og upprennandi tónskáld.</p>
-<br><br></td> 
-                <td style="padding: 0 0 0 0; max-width: 33vw; width: vh/vw"></td> 
-            </table>
-        </div>
-        <div id="section2">
-            
-        </div>
-        <footer id="footer">
-            <ul class="icons">
-						<li><a href="https://www.instagram.com/huldurkor/?__d=1%3Futm_source%3Dig_embed" target="_blank" class="icon brands circle fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://www.facebook.com/Huldur.Chamber.Choir" target="_blank" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" target="_blank" class="icon brands circle fa-tiktok"><span class="label">TikTok</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li><h3>&copy; Huldur 2024 </h3></li>
-					</ul>
-        </footer>
-        <script>
-            var img1 = document.getElementById('image');
-            window.onscroll = function() {scrollFunction()};
-            document.getElementById('image').style = "background-image: url(images/HULDURBG.png);background-size: contain;background-position: center;background-repeat: repeat;";
-            function scrollFunction() {
-                if ( window.pageYOffset >  window.innerHeight+10) {
-                    document.getElementById('image').style = "background-image: url('https://scontent.frkv2-1.fna.fbcdn.net/v/t39.30808-6/438088906_2064066607302279_6603813663231616967_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=yAanM8hVY5EQ7kNvgF6sy3s&_nc_ht=scontent.frkv2-1.fna&oh=00_AYAELZ5atH-QoSkHuPZ-XIfIevqbcX0kT9aiAXSSwtaeqw&oe=66656BC9'); background-size: cover;background-position: center;background-repeat: no-repeat;";
-                } else {
-                    document.getElementById('image').style = "background-image: url(images/HULDURBG.png);background-size: contain;background-position: center;background-repeat: repeat;";
-                }
+</head>
+<body>
 
-            
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                document.getElementById("header").style.height = "50px";
-                document.getElementById("stig").style.color = "transparent";  
-            } else {
-                document.getElementById("header").style.height = "0";
-                document.getElementById("stig").style.color = "white";
-            }
-                }
-        </script>
-        <script src="snake.js"></script>
-	</body>
+<header class="bgimg-1" id="header">
+    <nav class="menu">
+					<ul>
+                        <li class="current" style="white-space: nowrap;"><a href="#header">Heim</a></li>
+						<li class="current" style="white-space: nowrap;"><a href="#about">Um okkur</a></li>
+						<li style="white-space: nowrap;"><a href="#works">Verk</a></li>
+						<li style="white-space: nowrap;"><a href="#contact">Hafa samband</a></li>
+                        
+                        <!--<li><a  style="white-space: nowrap; position: relative; padding-left: 40px;" class='dropdown-arrow' href='http://'>Language</a>
+                          <ul class='sub-menus'>
+                            <li><a href='#'>English</a></li>
+                            <li><a href='#'>Deutsch</a></li>
+                            <li><a href='#'>Íslenska</a></li>
+                          </ul>
+                        </li>-->
+					</ul>
+                        <!--<a href="#" class="icon fa-globe"><span class="label">Language</span></a>-->
+				</nav>
+ <img id="huldur-logo" src="Images/HuldurLogo3.png">
+</header>
+<div class="release" id="release">
+  <h2 style="text-align:center; color: white">Huldur býr í fossgljúfri</h2><br><p style="text-align:center;">
+    <a id="latest" target=”_blank” href="https://youtube.com/@kammerkorinnhuldur8957?si=AnqhyzB9X2CVbEG9" class="fa-solid fa-music">
+        <span class="label"></span></a></p>
+    
+</div>
+
+<div class="info" id="about" style="padding: 100px 80px 40px;">
+  <h3 style="text-align:center;">Um okkur</h3>
+    <p>
+        Kammerk&oacute;rinn Huldur var stofna&eth;ur af k&oacute;rstj&oacute;ranum og t&oacute;nsk&aacute;ldinu Hrei&eth;ari Inga
+        &THORN;orsteinssyni hausti&eth; 2021. Samkv&aelig;mt &iacute;slenskum &thorn;j&oacute;&eth;s&ouml;gum og lj&oacute;&eth;um 
+        er huldur n&aacute;tt&uacute;ruv&aelig;ttur, sem b&yacute;r &iacute; fossglj&uacute;frum e&eth;a dj&uacute;pt &iacute; hafi 
+        og kn&yacute;r fram &ouml;ldugang me&eth; s&ouml;ng og leik &aacute; langspil. K&oacute;rme&eth;limir eru &aacute; aldrinum 
+        18-26 &aacute;ra. Markmi&eth; k&oacute;rstarfsins er a&eth; kynna k&oacute;rme&eth;limum stefnur og strauma innan n&yacute;rrar 
+        k&oacute;rt&oacute;nlistar og s&iacute;&eth;an, me&eth; &thorn;a&eth; veganesti, a&eth; virkja me&eth;limi til t&oacute;nsk&ouml;punar, 
+        svo a&eth; &uacute;r ver&eth;i vinnusmi&eth;ja &iacute; t&oacute;nsm&iacute;&eth;um fyrir ung og upprennandi t&oacute;nsk&aacute;ld.</p>
+</div>
+    
+<div class="hreidar">
+  <div class="column">
+  <h3>Hreiðar Ingi Þorsteinsson</h3>
+  <p style="position: relative; width: 100%">
+      Hrei&eth;ar Ingi &THORN;orsteinsson er t&oacute;nsk&aacute;ld og k&oacute;rstj&oacute;ri, stj&oacute;rnandi K&oacute;rs 
+      Menntask&oacute;lans vi&eth; Hamrahl&iacute;&eth; og Kammerk&oacute;rsins Huldar.
+      Hrei&eth;ar lauk t&oacute;nmenntakennarapr&oacute;fi fr&aacute; T&oacute;nlistarsk&oacute;lanum
+      &iacute; Reykjav&iacute;k &aacute;ri&eth; 2001 og bakkal&aacute;rn&aacute;mi &iacute; t&oacute;nsm&iacute;&eth;um fr&aacute; 
+      Listah&aacute;sk&oacute;la &Iacute;slands &aacute;ri&eth; 2007. &Aacute;ri s&iacute;&eth;ar lauk hann burtfararpr&oacute;fi &iacute; 
+      s&ouml;ng fr&aacute; S&ouml;ngsk&oacute;lanum &iacute; Reykjav&iacute;k. Erlendis stunda&eth;i hann framhaldsn&aacute;m &iacute; 
+      t&oacute;nsm&iacute;&eth;um og k&oacute;rstj&oacute;rn, fyrst vi&eth; h&aacute;sk&oacute;lann &iacute; Jyv&auml;skyl&auml;, 
+      Finnlandi og s&iacute;&eth;an &iacute; Eistlandi, &thorn;ar sem hann lauk meistaran&aacute;mi &iacute; t&oacute;nsm&iacute;&eth;um 
+      fr&aacute; Eistnesku t&oacute;nlistarakadem&iacute;unni &iacute; Tallinn, &uacute;tskrifa&eth;ist &thorn;a&eth;an me&eth; 
+      l&aacute;&eth;i &aacute;ri&eth; 2011.</p>
+  </div>
+  <div class="column">
+  <img src="Images/Hreidar.png" style="width: 400px;overflow: hidden;">
+  </div>
+</div>
+<div class="bgimg-2">
+</div>
+
+<div class="info" id="works">
+    <h3 style="text-align:center;">Verk</h3>
+  <p style="text-align:center;">
+      Vi&eth; h&ouml;fum enn ekki gefi&eth; &uacute;t neina t&oacute;nlist, en &thorn;&uacute; getur fundi&eth; fullt af 
+      uppt&ouml;kum af okkur &aacute; YouTube r&aacute;sinni okkar!<br>
+<br>
+      <a href="https://youtube.com/@kammerkorinnhuldur8957?si=AnqhyzB9X2CVbEG9" class="icon brands latest fa-youtube" 
+         style="color: black"><span class="label">Youtube</span></a></p>
+    </div>        
+
+<div class="bgimg-3">
+</div>
+
+<div class="formcarry-container" id="contact">
+    <h3 style="text-align:center;">Haf&eth;u samband</h3>
+          <form action="#" method="POST" class="formcarry-form">
+        <label for="name">Nafn</label>
+        <input type="text" id="name" name="fullName" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Skilabo&eth;</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+        <button type="submit">Senda</button>
+      </form>
+  <p style="position: relative; top: 10px; text-align: center;">&THORN;essi reitur er &iacute; vinnslu en h&aelig;gt er a&eth; hafa samband vi&eth; okkur &aacute; kammerkorinnhuldur@gmail.com</p>
+</div>
+
+
+<div class="bgimg-4">
+  <div class="caption">
+      <ul class="icons">
+          <li><a href="https://www.instagram.com/huldurkor/?__d=1%3Futm_source%3Dig_embed" class="icon brands circle fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="https://www.facebook.com/Huldur.Chamber.Choir" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon brands circle fa-spotify"><span class="label">Spotify</span></a></li>
+          <li><a href="#" class="icon brands circle fa-itunes-note"><span class="label">Itunes</span></a></li>
+      </ul>
+  </div>
+</div>
+<script src="https://unpkg.com/wavesurfer.js@7/dist/plugins/regions.min.js"></script>
+<script src="script.js"></script>
+</body>
 </html>
